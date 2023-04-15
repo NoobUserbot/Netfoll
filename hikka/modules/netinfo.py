@@ -45,11 +45,11 @@ class NetfollInfoMod(loader.Module):
         "_cfg_banner": "URL to image banner",
         "desc": (
             "<emoji document_id=4929415445443773080>🚀</emoji>"
-            " <b>Netfoll</b>\n\nTelegram userbot with a lot of features, like inline"
+            " <b>TREEPLUSERBOT</b>\n\nTelegram userbot with a lot of features, like inline"
             " galleries, forms, lists lists based on Hikka. Userbot - software,"
             " running on your Telegram account. If you write a command to any chat, it"
             " will get executed right there. Check out live examples at <a"
-            ' href="https://github.com/MXRRI/Netfoll">GitHub</a>'
+            ' href="https://gg.gg/flyhost">Our Site</a>'
         ),
     }
 
@@ -62,7 +62,7 @@ class NetfollInfoMod(loader.Module):
         "_ihandle_doc_info": "Отправить информацию о юзерботе",
         "_cfg_cst_msg": (
             "Кастомный текст сообщения в info. Может содержать ключевые слова {me},"
-            " {version}, {prefix}, {platform}, {upd}, {uptime}, {cpu_usage},"
+            " {version}, {prefix}, {upd}, {uptime}, {cpu_usage},"
             " {ram_usage}"
         ),
         "_cfg_cst_btn": (
@@ -80,8 +80,7 @@ class NetfollInfoMod(loader.Module):
         "desc": (
             "<emoji document_id=5062291541624619917>😀</emoji> <b>Netfoll</b>"
             " Юзербот, основанный на Hikka с богатым функционалом."
-            " Юзербот работает во всех чатах от имени твоего аккаунта. <b>Исходный код Netfoll можешь всегда посмотреть на <a"
-            ' href="https://github.com/MXRRI/Netfoll">GitHub</a>'
+            " Юзербот работает во всех чатах от имени твоего аккаунта. 
         ),
     }
 
@@ -112,8 +111,7 @@ class NetfollInfoMod(loader.Module):
         "desc": (
             "<emoji document_id=5062291541624619917>😀</emoji> <b>Netfoll</b>"
             " Юзербот, заснований на Hikka з багатим функціоналом."
-            " Юзер бот працює у всіх чатах від імені Твого аккаунта. <b>Вихідний код Netfol можеш завжди подивитися на <a"
-            ' href="https://github.com/MXRRI/Netfoll">GitHub</a>'
+            " Юзер бот працює у всіх чатах від імені Твого аккаунта. 
         ),
     }
 
@@ -134,7 +132,7 @@ class NetfollInfoMod(loader.Module):
             ),
             loader.ConfigValue(
                 "banner_url",
-                "https://github.com/MXRRI/Netfoll/raw/stable/assets/banner.png",
+                "https://x0.at/y8zP.png",
                 lambda: self.strings("_cfg_banner"),
                 validator=loader.validators.Link(),
             ),
@@ -142,8 +140,8 @@ class NetfollInfoMod(loader.Module):
 
     async def client_ready(self):
         self._me = await self._client.get_me()
-        if self.config["banner_url"] == "https://github.com/MXRRI/Netfoll/raw/stable/assets/banner.png":
-            self.config["banner_url"] = "https://github.com/MXRRI/Netfoll/raw/stable/assets/banner.png"
+        if self.config["banner_url"] == "https://x0.at/y8zP.png":
+            self.config["banner_url"] = "https://x0.at/y8zP.png"
 
     def _render_info(self, inline: bool) -> str:
         me = '<b><a href="tg://user?id={}">{}</a></b>'.format(
@@ -184,7 +182,7 @@ class NetfollInfoMod(loader.Module):
                 version=_version,
                 build=build,
                 prefix=prefix,
-                platform=platform,
+                platform="FlyHost",
                 uptime=utils.formatted_uptime(),
                 cpu_usage=utils.get_cpu_usage(),
                 ram_usage=f"{utils.get_ram_usage()} MB",
@@ -236,7 +234,7 @@ class NetfollInfoMod(loader.Module):
                 else {"message": self._render_info(True)}
             ),
             "thumb": (
-                "https://github.com/MXRRI/Netfoll/raw/Stable/assets/bot_pfp.png"
+                "https://x0.at/y8zP.png"
             ),
             "reply_markup": self._get_mark(),
         }
@@ -269,11 +267,7 @@ class NetfollInfoMod(loader.Module):
                 if message.out:
                     await message.delete()
 
-    @loader.command(ru_doc="Отправить информацию по типу 'Что такое Netfoll?'",)
-    async def whonetfoll(self, message: Message):
-        """Send info aka 'What is Netfoll?'"""
-        await utils.answer(message, self.strings("desc"))
-
+   
     @loader.command(ru_doc="<текст> - Изменить текст в .info",)
     async def setinfo(self, message: Message):
         """<text> - Change text in .info"""
