@@ -43,7 +43,7 @@ class NetfollSettingsMod(loader.Module):
     """Advanced settings for Hikka Userbot"""
 
     strings = {
-        "name": "NetfollSettings",
+        "name": "Settings",
         "watchers": (
             "<emoji document_id=5424885441100782420>👀</emoji>"
             " <b>Watchers:</b>\n\n<b>{}</b>"
@@ -166,13 +166,13 @@ class NetfollSettingsMod(loader.Module):
             " show...</b>"
         ),
         "privacy_leak": (
-            "⚠️ <b>This command gives access to your Netfoll web interface. It's not"
+            "⚠️ <b>This command gives access to your TREEPLUB web interface. It's not"
             " recommended to run it in public group chats. Consider using it in <a"
             " href='tg://openmessage?user_id={}'>Saved messages</a>. Type"
             "</b> <code>{}proxypass force_insecure</code> <b>to ignore this warning</b>"
         ),
         "privacy_leak_nowarn": (
-            "⚠️ <b>This command gives access to your Netfoll web interface. It's not"
+            "⚠️ <b>This command gives access to your TREEPLUB web interface. It's not"
             " recommended to run it in public group chats. Consider using it in <a"
             " href='tg://openmessage?user_id={}'>Saved messages</a>.</b>"
         ),
@@ -182,7 +182,7 @@ class NetfollSettingsMod(loader.Module):
         "btn_yes": "🚸 Open anyway",
         "btn_no": "🔻 Cancel",
         "lavhost_web": (
-            "✌️ <b>This link leads to your Netfoll web interface on lavHost</b>\n\n<i>💡"
+            "✌️ <b>This link leads to your TREEPLUB web interface on lavHost</b>\n\n<i>💡"
             " You'll need to authorize using lavHost credentials, specified on"
             " registration</i>"
         ),
@@ -244,22 +244,22 @@ class NetfollSettingsMod(loader.Module):
             "<emoji document_id=5312526098750252863>🚫</emoji> <b>Эту команду нужно"
             " выполнять в чате</b>"
         ),
-        "_cls_doc": "Дополнительные настройки Netfoll",
+        "_cls_doc": "Дополнительные настройки TREEPLUB",
         "nonick_warning": (
             "Внимание! Ты включил NoNick со стандартным префиксом! "
-            "Тебя могут замьютить в чатах Netfoll. Измени префикс или "
-            "отключи глобальный NoNick!"
+            "Тебя могут замьютить в чатах TREEPLUB. Измени префикс или "
+            "отключи глобальный TREEPLUB!"
         ),
         "reply_required": (
             "<emoji document_id=5312526098750252863>🚫</emoji> <b>Ответь на сообщение"
             " пользователя, для которого нужно включить NoNick</b>"
         ),
         "deauth_confirm": (
-            "⚠️ <b>Это действие полностью удалит Netfoll с этого аккаунта! Его нельзя"
+            "⚠️ <b>Это действие полностью удалит TREEPLUB с этого аккаунта! Его нельзя"
             " отменить</b>\n\n<i>- Все чаты, связанные с Netfoll будут удалены\n- Сессия"
-            " Netfoll будет сброшена\n- Инлайн бот Netfoll будет удален</i>"
+            " Netfoll будет сброшена\n- Инлайн бот TREEPLUB будет удален</i>"
         ),
-        "deauth_confirm_step2": "⚠️ <b>Ты точно уверен, что хочешь удалить Netfoll?</b>",
+        "deauth_confirm_step2": "⚠️ <b>Ты точно уверен, что хочешь удалить TREEPLUB?</b>",
         "deauth_yes": "Я уверен",
         "deauth_no_1": "Я не уверен",
         "deauth_no_2": "Не точно",
